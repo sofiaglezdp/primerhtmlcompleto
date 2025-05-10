@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página con un poco de todo :)</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <script src="script.js"></script>
+</head>
+<body>
+  <header>
+  <button class="botonregistro" onclick="mostrarFormulario()">Iniciar sesión / Registrarse</button>
+    <picture>
+      <source class="clickable" srcset="https://images.vexels.com/media/users/3/208851/isolated/preview/7a788aae28d4b018656def8dca8f3b00-duotono-de-celular-del-hospital.png" media="(max-width: 700px)">
+      <img class="clickable" src="https://cdn-icons-png.flaticon.com/512/4535/4535090.png" alt="Encabezado">
+    </picture>
+  </header>
+<a href="preguntas.html">
+  <img src="https://i.pinimg.com/474x/e3/d1/04/e3d104d24a4a474c83d1964f78925015.jpg" alt="Haz click para ir a otra página para responder preguntas" width="200">
+</a>
+<div id="mainContent" style="display:none;">
+  <p><span id="nombre"></span>! eres un/a pesado/ada</p>
+</div>
+  <section id="registro" style="display: none; padding: 20px;">
+    <h2>Formulario de Usuario</h2>
+    <form id="userForm">
+      <label for="fname">Nombre:</label><br>
+      <input type="text" id="fname" name="fname" placeholder="Tu nombre"><br>
+
+      <label for="lname">Apellido:</label><br>
+      <input type="text" id="lname" name="lname" placeholder="Tu apellido"><br>
+
+      <label for="age">Edad:</label><br>
+      <input type="number" id="age" name="age" placeholder="Tu edad"><br>
+
+      <label for="email">Correo electrónico:</label><br>
+      <input type="email" id="email" name="email" placeholder="tucorreo@ejemplo.com"><br>
+
+	  <label for="password">Contraseña:</label><br>
+      <input type="password" id="password" required><br>
+
+      <label for="repeatPassword">Repetir Contraseña:</label><br>
+      <input type="password" id="repeatPassword" required><br>
+	  
+      <label for="country">País:</label><br>
+      <input type="text" id="country" name="country" placeholder="Tu país"><br>
+
+      <label>Género:</label><br>
+      <input type="radio" id="male" name="gender" value="Hombre">
+      <label for="male">Hombre</label><br>
+      <input type="radio" id="female" name="gender" value="Mujer">
+      <label for="female">Mujer</label><br>
+      <input type="radio" id="other" name="gender" value="Otro">
+      <label for="other">Otro</label><br>
+
+      <label for="occupation">¿Cuál es tu ocupación?</label><br>
+      <select id="occupation" name="occupation">
+        <option value="Estudiante">Estudiante</option>
+        <option value="Empleado">Empleado</option>
+        <option value="Autónomo">Autónomo</option>
+        <option value="Desempleado">Desempleado</option>
+        <option value="Otro">Otro</option>
+      </select><br><br>
+	  <label for="dni">DNI (sin letra):</label><br>
+      <input type="number" id="dni" maxlength="8" oninput="calcularLetraDNI()"><br><br>
+      <div id="letraDNI"></div>
+      <button type="button" onclick="guardarEnBloc()">Guardar en Bloc de Notas</button>
+    </form> 
+  </section>
+  
+<section id="zonaPrivada" style="display: none; padding: 20px; background-color: #e0ffe0;">
+  <h2>Zona Privada</h2>
+  <p id="mensajeBienvenida"></p>
+  <button onclick="mostrarAjustes()">⚙️ Ajustes</button>
+  <button onclick="cerrarSesion()">🔒 Cerrar sesión</button>
+  <p>Gracias por registrarte. Aquí puedes acceder a tus datos y funcionalidades exclusivas.</p>
+  <div id="formularioAjustes" style="display: none; margin-top: 15px;">
+      <h3>Modificar datos</h3>
+      <label for="nuevoEmail">Nuevo Email:</label><br>
+      <input type="email" id="nuevoEmail"><br><br>
+
+      <label for="nuevaContra">Nueva Contraseña:</label><br>
+      <input type="password" id="nuevaContra"><br><br>
+      
+      <label for="antiguaContra">Contraseña actual:</label><br>
+      <input type="password" id="antiguaContra"><br><br>
+
+      <button onclick="guardarAjustes()">Guardar</button>
+      <button onclick="cancelarAjustes()">Cancelar</button>
+    </div>
+</section>
+ <main>
+ <button id="botonContar">Contar párrafos</button>
+ <p id="resultadoParrafos"></p>
+<div id="contenedorParrafos"></div>
+
+	<h2>Rellena el formulario y dale a la interrogación para el cuestionario para ver tu IQ</h2>
+      <div class="cambio-de-carita">
+        <h2>¿Cómo se siente la carita?</h2>
+        <p>Haz clic en los botones para cambiar la expresión.</p>
+
+        <img id="faceImage" src="https://cdn-icons-png.flaticon.com/512/4989/4989647.png" alt="Cara neutra">
+
+        <div>
+          <button class="happy" onclick="document.getElementById('faceImage').src='https://cdn-icons-png.flaticon.com/512/5372/5372211.png'">¡Feliz!</button>
+          <button class="sad" onclick="document.getElementById('faceImage').src='https://cdn-icons-png.flaticon.com/512/4989/4989793.png'">Triste :(</button>
+        </div>
+      </div>
+    </main>
+  </div>
+
+
+  <article>
+    <h1>Bienvenido a mi página adaptable</h1>
+    <h5>Este es un ejemplo de una página que se adapta a distintos tamaños de pantalla.</h5>
+   </article>
+
+  <h2>Gracias a esta página podrás conocerme un poco más sobre mi personalidad y mi vida</h2>
+  <div class="index">
+    <h3>Índice</h3>
+    <ul>
+      <li><a href="#datos-personales">1. Datos Personales</a></li>
+      <li><a href="#trayectoria-deportiva">2. Mi Trayectoria Deportiva</a>
+        <ul>
+          <li><a href="#patines">2.1 Patines</a></li>
+          <li><a href="#natacion">2.2 Natación</a></li>
+          <li><a href="#tenis">2.3 Tenis</a></li>
+          <li><a href="#balonmano">2.4 Balonmano</a></li>
+        </ul>
+      </li>
+      <li><a href="#mis-estudios">3. Mis Estudios</a></li>
+      <li><a href="#aspiraciones-profesionales">4. Mis Aspiraciones Profesionales</a></li>
+      <li><a href="#personalidad-valores">5. Mi Personalidad y Valores</a></li>
+      <li><a href="#familia">6. Familia</a></li>
+      <li><a href="#horario">7. Mi Horario del Cole</a></li>
+    </ul>
+  </div>
+
+  <section id="datos-personales">
+    <h2>1. Datos Personales</h2>
+    <p>Hola, soy Sofía y tengo 18 años. Nací el 26 de marzo de 2007 y actualmente estoy cursando 2º de Bachillerato. Mi sueño es estudiar Ingeniería Informática, ya que me apasiona todo lo relacionado con la tecnología y las ciencias.</p>
+  </section>
+
+  <section id="trayectoria-deportiva">
+    <h2>2. Mi Trayectoria Deportiva</h2>
+    <p>Desde pequeña, siempre he tenido una gran pasión por el deporte. Me he dedicado a varios deportes a lo largo de mi vida, lo que me ha ayudado a desarrollar habilidades y valores que hoy en día sigo aplicando en mi día a día.</p>
+
+    <section id="patines">
+      <h3>2.1 Patines</h3>
+      <p>Empecé con los patines cuando era muy pequeña. La sensación de velocidad y la libertad que me ofrecía este deporte me cautivaron desde el principio. Participé en varias competiciones locales y me divertí mucho mejorando mi agilidad y mi equilibrio.</p>
+    </section>
+
+    <section id="natacion">
+      <h3>2.2 Natación</h3>
+      <p>A los pocos años de patinar, me decidí a probar la natación. Me ayudó a mejorar mi resistencia y mis capacidades físicas, además de enseñarme a mantener la calma y la concentración bajo presión. Competí en algunos campeonatos escolares y me gustó mucho la sensación de superarme en cada entrenamiento.</p>
+    </section>
+
+    <section id="tenis">
+      <h3>2.3 Tenis</h3>
+      <p>Cuando tenía unos 10 años, comencé a jugar al tenis. Me atraía el desafío de jugar de forma individual, donde la estrategia y la concentración son clave. Entrené durante varios años, participando en torneos regionales, y aprendí a manejar tanto la presión mental como a mejorar mi técnica y habilidades.</p>
+    </section>
+
+    <section id="balonmano">
+      <h3>2.4 Balonmano</h3>
+      <p>Sobre los 10 años dejé el tenis y me adentré en el balonmano, el cual forma parte de mi día a día desde entonces.</p>
+      <p>Gracias a él puedo organizarme tanto mental como físicamente y relacionarme con unas de las mejores amistades que he hecho a lo largo de mi vida.</p>
+    </section>
+  </section>
+
+  <section id="mis-estudios">
+    <h2>3. Mis Estudios</h2>
+    <p>Actualmente estoy en 2º de Bachillerato, en la modalidad de ciencias y tecnología. Desde pequeña, siempre me ha gustado las matemáticas y la física, y eso me ha llevado a tomar la decisión de estudiar Ingeniería Informática. Estoy trabajando duro para obtener buenos resultados en todas las asignaturas, especialmente en matemáticas e informática, ya que sé que son clave para mi futuro.</p>
+  </section>
+
+  <section id="aspiraciones-profesionales">
+    <h2>4. Mis Aspiraciones Profesionales</h2>
+    <p>A lo largo de los años, he descubierto que la informática es un campo que me apasiona profundamente. Quiero estudiar Ingeniería Informática en la universidad para poder desarrollar soluciones tecnológicas que ayuden a mejorar la vida de las personas. Me gusta mucho la idea de poder resolver problemas complejos utilizando tecnología, y tengo claro que mi futuro está en el mundo de la informática.</p>
+  </section>
+
+  <section id="personalidad-valores">
+    <h2>5. Mi Personalidad y Valores</h2>
+    <p>Me considero una persona muy disciplinada, organizada y con un fuerte sentido de trabajo en equipo. A lo largo de mis años practicando deportes, he aprendido a superar mis límites y a no rendirme ante los desafíos. Siempre busco mejorar en todo lo que hago, ya sea en los estudios, en el deporte o en la vida cotidiana. Creo que la constancia y el esfuerzo son claves para lograr lo que uno se propone, y es algo que llevo conmigo en cada paso que doy.</p>
+  </section>
+
+  <section id="familia">
+    <h2>6. Familia</h2>
+    <p>Mi familia es muy importante para mí. Está formada por mis padres y mi hermana pequeña.</p>
+    <p>Mi padre es una persona muy trabajadora. Mi madre, siempre está preocupada por nuestro bienestar. Y mi hermana pequeña de 15 años, que, a pesar de ser muy diferentes en muchas cosas, compartimos una relación muy especial. A veces puede ser traviesa y espontánea, pero también es muy cariñosa y divertida. Aunque hay veces en que no estamos de acuerdo, siempre me hace reír y me llena de energía positiva.</p>
+  </section>
+  
+  <section id="horario">
+    <h2>7. Mi horario del cole</h2>
+    <table style="margin: 0 auto;">
+      <thead>
+        <tr>
+          <th>Hora</th>
+          <th>Lunes</th>
+          <th>Martes</th>
+          <th>Miércoles</th>
+          <th>Jueves</th>
+          <th>Viernes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>08:30 - 09:20</td>
+          <td>Filosofía</td>
+          <td>TIC</td>
+          <td>Historia</td>
+          <td>Matemáticas</td>
+          <td>Inglés</td>
+        </tr>
+        <tr>
+          <td>09:20 - 09:25</td>
+          <td>Descanso</td>
+          <td>Descanso</td>
+          <td>Descanso</td>
+          <td>Descanso</td>
+          <td>Descanso</td>
+        </tr>
+        <tr>
+          <td>09:25 - 10:15</td>
+          <td>TIG</td>
+          <td>Matemáticas</td>
+          <td>Lengua</td>
+          <td>Física</td>
+          <td>Lengua</td>
+        </tr>
+        <tr>
+          <td>10:15 - 10:20</td>
+          <td>Descanso</td>
+          <td>Descanso</td>
+          <td>Descanso</td>
+          <td>Descanso</td>
+          <td>Descanso</td>
+        </tr>
+        <tr>
+          <td>10:20 - 11:10</td>
+          <td>TIC</td>
+          <td>Historia</td>
+          <td>TIC</td>
+          <td>TIG</td>
+          <td>Física</td>
+        </tr>
+        <tr>
+          <td>11:10 - 11:35</td>
+          <td>Recreo</td>
+          <td>Recreo</td>
+          <td>Recreo</td>
+          <td>Recreo</td>
+          <td>Recreo</td>
+        </tr>
+        <tr>
+          <td>11:35 - 12:25</td>
+          <td>Física</td>
+          <td>Lengua</td>
+          <td>Matemáticas</td>
+          <td>Lengua</td>
+          <td>TIC</td>
+        </tr>
+        <tr>
+          <td>12:25 - 12:30</td>
+          <td>Descanso</td>
+          <td>Descanso</td>
+          <td>Descanso</td>
+          <td>Descanso</td>
+          <td>Descanso</td>
+        </tr>
+        <tr>
+          <td>12:30 - 13:20</td>
+          <td>Matemáticas</td>
+          <td>Física</td>
+          <td>Inglés</td>
+          <td>Inglés</td>
+          <td>Historia</td>
+        </tr>
+        <tr>
+          <td>13:20 - 13:25</td>
+          <td>Descanso</td>
+          <td>Descanso</td>
+          <td>Descanso</td>
+          <td>Descanso</td>
+          <td>Descanso</td>
+        </tr>
+        <tr>
+          <td>13:25 - 14:15</td>
+          <td>Historia</td>
+          <td>TIG</td>
+          <td>Filosofía</td>
+          <td>Filosofía</td>
+          <td>TIG</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <h5><br>Haz click en el patito para ver una página web super chuuuuuula</h5>
+    <a href="https://blogticdosbe.blogspot.com/" target="_blank">
+      <img src="https://previews.123rf.com/images/chubarov/chubarov1611/chubarov161100002/67753861-patito-de-juguete-para-ba%C3%B1o-sobre-fondo-blanco.jpg.jpg" alt="Patitos con sombrero" width="300">
+      <img src="favicon.ico" alt="Patito" width="100">
+    </a>
+   <p>Prueba a hacer zoom a ver que pasa</p>
+   <section style="text-align: center; padding: 20px;">
+  <h2>¡Mira esta animación divertida!</h2>
+  <canvas id="miCanvas" width="400" height="300" style="border:1px solid #ccc; background-color: #fefefe;"></canvas>
+</section>
+  <footer>
+    <p>© 2025 Sofía González.</p>
+  </footer>
+</body>
+</html>
