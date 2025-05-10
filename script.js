@@ -176,12 +176,6 @@ function () {
     alert("Has cerrado sesión.");
   };
 });
-function mostrarFormulario() {
-  document.getElementById('registro').style.display = 'block';
-  document.getElementById('contenidoPrincipal').style.display = 'none';
-  document.getElementById('zonaPrivada').style.display = 'none';
-  document.getElementById('btnInicio').style.display = 'inline-block';
-}
 
 function mostrarInicio() {
   document.getElementById('registro').style.display = 'none';
