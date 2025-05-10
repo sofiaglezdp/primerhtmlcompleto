@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 document.addEventListener("DOMContentLoaded", 
 function () {
   // === ANIMACIÓN DEL CANVAS ===
@@ -406,5 +405,4 @@ function mostrarZonaPrivada(nombreUsuario = "Usuario") {
   document.getElementById('registro').style.display = 'none';
   document.getElementById('contenidoPrincipal').style.display = 'none';
   document.getElementById('btnInicio').style.display = 'inline-block';
->>>>>>> c05a7ad4cafd5be17ff7a1d5523259c99d10b7d7
 }
