@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Preguntas de Cálculo Mental</title>
+      <link rel="stylesheet" href="stylesform.css">
+	    <link rel="icon" href="https://i.pinimg.com/474x/e3/d1/04/e3d104d24a4a474c83d1964f78925015.jpg" type="image/x-icon">
+</head>
+<body>
+  <h1>Ejercicio de Cálculo Mental</h1>
+
+  <form id="quizForm">
+
+    <div class="question">
+      <label>1. ¿Cuál es el resultado de 37 × 8?</label><br>
+      <input type="text" name="q1">
+    </div>
+
+    <div class="question">
+      <label>2. ¿Qué número falta? ___ × 9 = 252</label><br>
+      <input type="text" name="q2">
+    </div>
+
+    <div class="question">
+      <label>3. ¿Cuál de estas opciones es igual a 144 ÷ 12?</label><br>
+      <input type="radio" name="q3" value="10"> 10<br>
+      <input type="radio" name="q3" value="12"> 12<br>
+      <input type="radio" name="q3" value="14"> 14<br>
+      <input type="radio" name="q3" value="18"> 18
+    </div>
+
+    <div class="question">
+      <label>4. Si 15 × ___ = 195, ¿cuál es el número que falta?</label><br>
+      <input type="text" name="q4">
+    </div>
+
+    <div class="question">
+      <label>5. ¿Cuál es el cuadrado de 23?</label><br>
+      <input type="text" name="q5">
+    </div>
+
+    <div class="question">
+      <label>6. El doble de un número es 146. ¿Cuál es el número?</label><br>
+      <input type="text" name="q6">
+    </div>
+
+    <div class="question">
+      <label>7. ¿Cuál es el valor de 625 ÷ 25?</label><br>
+      <input type="radio" name="q7" value="15"> 15<br>
+      <input type="radio" name="q7" value="20"> 20<br>
+      <input type="radio" name="q7" value="25"> 25<br>
+      <input type="radio" name="q7" value="30"> 30
+    </div>
+
+    <div class="question">
+      <label>8. Si 18 × ___ = 486, ¿cuál es el número?</label><br>
+      <input type="text" name="q8">
+    </div>
+
+    <div class="question">
+      <label>9. ¿Qué número sumado a 89 da 150?</label><br>
+      <input type="text" name="q9">
+    </div>
+
+    <div class="question">
+      <label>10. ¿Cuál de las siguientes opciones es igual a (45 × 2) - 15?</label><br>
+      <input type="radio" name="q10" value="60"> 60<br>
+      <input type="radio" name="q10" value="75"> 75<br>
+      <input type="radio" name="q10" value="85"> 85<br>
+      <input type="radio" name="q10" value="90"> 90
+    </div>
+
+    <button type="submit">Enviar</button>
+  </form>
+<script>
+  document.getElementById('quizForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // evita que recargue la página
+
+    // Respuestas correctas
+    const correctAnswers = {
+      q1: "296",         // 37 × 8
+      q2: "28",          // __ × 9 = 252
+      q3: "12",          // 144 ÷ 12
+      q4: "13",          // 15 × __ = 195
+      q5: "529",         // 23²
+      q6: "73",          // doble = 146
+      q7: "25",          // 625 ÷ 25
+      q8: "27",          // 18 × __ = 486
+      q9: "61",          // 89 + __ = 150
+      q10: "75"          // (45 × 2) - 15
+    };
+
+    let score = 0;
+
+    // Recorremos las respuestas
+    for (const [key, value] of Object.entries(correctAnswers)) {
+      const input = document.querySelector(`[name="${key}"]:checked`) || document.querySelector(`[name="${key}"]`);
+      if (input && input.value.trim() === value) {
+        score++;
+      }
+    }
+
+    const iq = score * 10;
+    alert("Tu IQ es: " + iq + " (acertaste " + score + " de 10)");
+  });
+</script>
+
+</body>
+</html>

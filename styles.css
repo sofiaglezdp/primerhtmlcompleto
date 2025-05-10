@@ -1,0 +1,553 @@
+/* Estilos generales */
+html {
+  max-width: 100%;
+  overflow-x: hidden; /* Evita que el contenido se desborde horizontalmente */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #d2fffd;
+    color: #333;
+    line-height: 1.6;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#registro {
+    background-color: #e0f7fa; /* Fondo azul verdoso suave */
+    padding: 20px;
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave para dar profundidad */
+    max-width: 600px;
+    margin: 20px auto; /* Centra el formulario */
+}
+
+#registro h2 {
+    color: #00796b; /* Título en verde azulado oscuro */
+    text-align: center;
+}
+
+#registro label {
+    font-size: 1.1rem;
+    color: #004d40; /* Texto en verde azulado oscuro */
+    margin-bottom: 5px;
+    display: block;
+	display: inline-block; /* Alinea el texto junto al botón de radio */
+    margin-right: 15px; /* Espaciado entre las opciones */
+    font-size: 1rem; /* Tamaño de la fuente */
+}
+
+#registro input[type="text"],
+#registro input[type="email"],
+#registro input[type="number"],
+#registro input[type="password"],
+#registro select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0 20px 0; /* Márgenes entre campos */
+    border: 1px solid #80deea; /* Borde azul verdoso claro */
+    border-radius: 4px; /* Bordes redondeados */
+    box-sizing: border-box; /* Para incluir padding y border dentro del tamaño */
+    font-size: 1rem;
+}
+
+#registro input[type="text"]:focus,
+#registro input[type="email"]:focus,
+#registro input[type="number"]:focus,
+#registro input[type="password"]:focus,
+#registro select:focus {
+    border-color: #00796b; /* Borde verde azulado oscuro al enfocar */
+    outline: none;
+}
+
+#registro input[type="radio"] {
+    margin-right: 5px;
+}
+
+#registro button {
+    background-color: #00796b; /* Botón verde azulado oscuro */
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%; /* Botón ancho completo */
+}
+
+#registro button:hover {
+    background-color: #004d40; /* Color más oscuro cuando se pasa el mouse */
+}
+
+#registro button:focus {
+    outline: none; /* Quitar borde por defecto */
+}
+
+
+   #loginForm {
+      text-align: center;
+      margin: 20px;
+    }
+    #mainContent {
+      display: block; /* Asegurarse de que el contenido principal se muestre */
+    }
+    #formularioUsuario {
+      display: none;
+      text-align: center;
+      margin-top: 20px;
+    }
+	
+header {
+        background-color: #00796b;
+        text-align: center;
+        padding: 10px;
+}
+/* Estilos para el título principal */
+
+h1 {
+    text-align: center;
+    padding: 20px;
+    color: #00796b;
+    text-transform: uppercase; /* TODO EN MAYÚSCULAS */
+}
+
+/* Estilos para el índice */
+.index {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 15px;
+    background-color: #e3f2fd;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.index h3 {
+    text-align: center;
+    color: blue;
+    text-transform: uppercase; /* MAYÚSCULAS */
+}
+
+.index ul {
+    list-style-type: none;
+    padding: 0;
+    text-transform: uppercase; 
+}
+
+.index ul li {
+    padding: 5px 0;
+    text-transform: uppercase; /* MAYÚSCULAS */
+}
+
+.index a {
+    text-decoration: none;
+    color: #0d47a1;
+    font-weight: bold;
+    text-transform: uppercase; /* MAYÚSCULAS */
+}
+
+.index a:hover {
+    text-decoration: underline;
+    text-transform: uppercase; /* MAYÚSCULAS */
+}
+.botonregistro {
+  background-color: #009688; /* Azul verdoso */
+  color: white;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center; 
+  width: 80%;
+  margin: 20px auto;
+  margin-top: 50px;
+}
+
+.botonregistro:hover {
+  background-color: #00796B; /* Azul verdoso más oscuro */
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.botonregistro:active {
+  transform: scale(0.98);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+#botonContar {
+  display: block;
+  margin: 40px auto 0 auto; /* Centra horizontalmente con espacio arriba */
+  background-color: #00897B;
+  color: white;
+  padding: 10px 22px;
+  font-size: 15px;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+#botonContar:hover {
+  background-color: #00695C;
+  transform: scale(1.05);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+#botonContar:active {
+  transform: scale(0.97);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+#resultadoParrafos {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333; /* Un color gris oscuro para el texto */
+  background-color: #e0f7fa; /* Un fondo azul muy suave (teal claro) */
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center; /* Centra el texto */
+  width: 80%; /* Ajusta el ancho del párrafo */
+  margin: 20px auto; /* Lo centra horizontalmente con margen superior e inferior */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave para darle profundidad */
+}
+
+#resultadoParrafos:hover {
+  background-color: #b2ebf2; /* Un tono más claro al pasar el mouse */
+}
+
+#resultadoParrafos:empty {
+  color: #9e9e9e; /* Cambia el color si el párrafo está vacío */
+  font-style: italic; /* Hace que el texto vacío se vea en cursiva */
+}
+
+#contenedorParrafos p {
+  font-size: 18px;
+  color: #333;
+  background-color: #e0f7fa; /* Fondo azul verdoso claro */
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  transition: background-color 0.3s ease;
+ text-align: center; /* Centra el texto */
+  width: 80%; /* Ajusta el ancho del párrafo */
+  margin: 20px auto; /* Lo centra horizontalmente con margen superior e inferior */
+}
+
+#contenedorParrafos p:hover {
+  background-color: #b2ebf2; 
+}
+
+/* Estilos para las secciones */
+section {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 15px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    text-transform: uppercase; /* MAYÚSCULAS */
+}
+
+img {
+  display: block;
+  margin: 35px auto;
+  max-width: 300px;
+  border: none;
+  box-shadow: none;
+  outline: 1px blue;
+  text-align: center;
+}
+
+h2 {
+    color: #00796b;
+    padding-bottom: 5px;
+    text-transform: uppercase; /* MAYÚSCULAS */
+	text-align: center;
+}
+
+h3 {
+    color: #0288d1;
+    text-transform: uppercase; /* MAYÚSCULAS */
+}
+p {
+    text-transform: uppercase; /* MAYÚSCULAS */
+}
+
+/* Estilos para la tabla de horario */
+
+#horario {
+  font-family: Arial, sans-serif; /* Fuente moderna */
+  text-align: center;
+  margin: 20px auto;
+  max-width: 100%; /* Asegura que la tabla no sobrepase el ancho de la pantalla */
+}
+
+#horario h2 {
+  font-size: 24px;
+  color: #004d40; /* Azul verdoso oscuro para el título */
+  margin-bottom: 15px;
+}
+
+table {
+  width: 100%; /* La tabla ocupará el 100% del ancho disponible */
+  border-collapse: collapse;
+  background-color: #e0f2f1; /* Fondo suave de azul verdoso claro */
+}
+
+th, td {
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #00796b; /* Borde azul verdoso oscuro */
+}
+
+th {
+  background-color: #00796b; /* Fondo azul verdoso brillante para los encabezados */
+  color: white; /* Texto blanco para los encabezados */
+  font-size: 18px;
+}
+
+td {
+  background-color: #ffffff; /* Fondo blanco para las celdas */
+  color: #004d40; /* Texto azul verdoso oscuro */
+}
+
+tr:nth-child(even) td {
+  background-color: #b2dfdb; /* Fondo suave azul verdoso para filas pares */
+}
+
+tr:nth-child(odd) td {
+  background-color: #ffffff; /* Fondo blanco para filas impares */
+}
+
+tr:hover td {
+  background-color: #004d40; /* Fondo azul verdoso oscuro al pasar el ratón sobre las filas */
+  color: white; /* Texto blanco cuando se pasa el ratón */
+}
+
+
+
+/* Estilos para los enlaces de los patitos */
+h5, h6 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+center a img {
+    transition: transform 0.3s ease;
+}
+
+center a img:hover {
+    transform: scale(1.1);
+}
+footer {
+        background-color: #004d40;
+        color: white;
+        text-align: center;
+        padding: 10px;
+}
+.cambio-de-carita {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  margin-top: 50px;
+}
+
+.cambio-de-carita img {
+  width: 150px;
+  transition: transform 0.3s ease;
+}
+
+.cambio-de-carita button {
+  padding: 10px 20px;
+  margin: 10px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+.cambio-de-carita .happy {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.cambio-de-carita .sad {
+  background-color: #f44336;
+  color: white;
+}
+
+/* Consulta Media  para pantallas más pequeñas MODO MÓVIL O ZOOM (MENOS DE 700px O ZOOM ALTO) */
+@media (max-width: 700px) {
+    body {
+        background-color: #ff8adf!important; /* FONDO FUCSIA */
+        color: #ff00b9!important; /* TEXTO FUCSIA */
+    }
+    header {
+        background-color: #cf006e!important; /* Rectángulo superior (header) color fucsia */
+    }
+    footer {
+        background-color: #cf006e!important; /* Rectángulo superior (header) color fucsia */
+    }
+    .index {
+        background-color: #ffdef6!important; /* FUCSIA CLARO */
+    }
+    section {
+        padding: 10px;
+    }
+    h2, h3, h4, h5, h6 {
+        color: #81045f!important;
+    }
+    p {
+        color: #000000!important;
+    }
+    th {
+        background-color: #ffffff; /* ENCABEZADO DE TABLA FUCSIA */
+        color: #d62ba7!important; /* TEXTO BLANCO PARA MEJOR VISIBILIDAD */
+    }
+
+    .table-container {
+        width: 100%;
+        overflow-x: auto; /* Permite desplazamiento horizontal si la tabla se desborda */
+    }
+
+    table {
+        width: 100%;
+        margin: 0 auto;
+        background-color: #f1c6e3; /* Fondo suave de fucsia claro */
+        table-layout: fixed; /* Asegura que la tabla no se desborde */
+    }
+
+    th, td {
+        padding: 5px; /* Reduce el padding */
+        text-align: center;
+        border: 1px solid #9c1d7f; /* Borde fucsia oscuro */
+        word-wrap: break-word; /* Evita que el contenido de las celdas se desborde */
+        max-width: 150px; /* Limita el ancho máximo de las celdas */
+    }
+
+    th {
+        background-color: #d81b60; /* Fondo fucsia brillante para los encabezados */
+        color: white; /* Texto blanco para los encabezados */
+        font-size: 14px; /* Ajusta el tamaño de la fuente */
+    }
+
+    td {
+        background-color: #ffffff; /* Fondo blanco para las celdas */
+        color: #9c1d7f; /* Texto fucsia oscuro */
+        font-size: 8px;
+    }
+
+    tr:nth-child(even) td {
+        background-color: #f8bbd0; /* Fondo suave de fucsia para filas pares */
+    }
+
+    tr:nth-child(odd) td {
+        background-color: #ffffff; /* Fondo blanco para filas impares */
+    }
+
+    tr:hover td {
+        background-color: #9c1d7f; /* Fondo fucsia oscuro al pasar el ratón sobre las filas */
+        color: white; /* Texto blanco cuando se pasa el ratón */
+    }
+
+#registro {
+        background-color: #f0f0f0 !important;
+        border-radius: 8px !important;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1) !important;
+        padding: 20px !important;
+        width: 100% !important;
+        max-width: 500px !important;
+        margin: 20px auto !important;
+    }
+
+    #registro h2 {
+        color: #6a1b9a !important; /* Fucsia oscuro */
+        font-size: 22px !important;
+        margin-bottom: 20px !important;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="number"],
+    input[type="password"],
+    select {
+        width: 100% !important;
+        padding: 10px !important;
+        margin-bottom: 15px !important;
+        border: 2px solid #9c27b0 !important; /* Fucsia claro */
+        border-radius: 4px !important;
+        font-size: 16px !important;
+    }
+
+    input[type="text"]:focus,
+    input[type="email"]:focus,
+    input[type="number"]:focus,
+    input[type="password"]:focus,
+    select:focus {
+        border-color: #d81b60 !important; /* Fucsia más intenso */
+        outline: none !important;
+    }
+
+    button {
+        background-color: #f371b6 !important; /* Fucsia */
+        color: white !important;
+        border: none !important;
+        padding: 10px 20px !important;
+        border-radius: 4px !important;
+        cursor: pointer !important;
+        font-size: 16px !important;
+    }
+
+    button:hover {
+        background-color: #c2185b !important; /* Fucsia más oscuro */
+    }
+
+    /* Zona Privada */
+    #zonaPrivada {
+        background-color: #e0e0e0 !important;
+        border-radius: 8px !important;
+        padding: 20px !important;
+        max-width: 600px !important;
+        margin: 20px auto !important;
+    }
+
+    #zonaPrivada h2 {
+        color: #6a1b9a !important; /* Fucsia oscuro */
+        font-size: 22px !important;
+        margin-bottom: 20px !important;
+    }
+
+    #zonaPrivada button {
+        background-color: #9c27b0 !important; /* Fucsia claro */
+        margin-right: 10px !important;
+    }
+
+    #zonaPrivada button:hover {
+        background-color: #8e24aa !important; /* Fucsia más oscuro */
+    }
+
+    #formularioAjustes {
+        margin-top: 15px !important;
+    }
+
+    #formularioAjustes input[type="email"],
+    #formularioAjustes input[type="password"] {
+        border: 2px solid #9c27b0 !important;
+    }
+
+    #formularioAjustes button {
+        background-color: #9c27b0 !important;
+        color: white !important;
+    }
+
+    #formularioAjustes button:hover {
+        background-color: #8e24aa !important;
+    }
+}

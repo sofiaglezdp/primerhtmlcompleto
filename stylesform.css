@@ -1,0 +1,76 @@
+<style>
+    body { 
+	font-family: Arial, sans-serif; margin: 20px; }
+    .question { margin-bottom: 25px; }
+    input[type="text"] { width: 100px; 
+	}
+	
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #e6f0fa;
+    color: #1a3d6d;
+    margin: 30px;
+  }
+
+  h1 {
+    color: #114477;
+    text-align: center;
+    border-bottom: 2px solid #99c2e6;
+    padding-bottom: 10px;
+  }
+
+  .question {
+    background-color: #ffffff;
+    border: 1px solid #cce0f5;
+    border-left: 5px solid #4d94db;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 20px;
+    box-shadow: 2px 2px 5px rgba(0, 51, 102, 0.1);
+  }
+
+  input[type="text"] {
+    padding: 6px;
+    border: 1px solid #aaccee;
+    border-radius: 4px;
+    margin-top: 5px;
+  }
+
+  input[type="radio"] {
+    margin-right: 6px;
+  }
+
+  button {
+    background-color: #4d94db;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    margin: 30px auto;
+    box-shadow: 1px 1px 5px rgba(0, 0, 50, 0.2);
+  }
+
+  button:hover {
+    background-color: #377dc2;
+  }
+.boton-inicio {
+  background-color: #0077cc; /* Azul personalizado */
+  color: white;
+  font-size: 1.4rem;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  font-weight: bold;
+}
+
+.boton-inicio:hover {
+  background-color: #005fa3;
+  transform: scale(1.05);
+}
+</style>
